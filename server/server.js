@@ -11,13 +11,15 @@ let waitList = [];
 app.use(bodyParser.json());
 
 app.post('/api/reservation', function (req, res) {
-    console.log(req.body);
-    if (reservations.length <= 5) {
+    
+
+    if (reservations.length < 5) {
         reservations.push(req.body);
+        res.end('true');
     } else {
         waitList.push(req.body);
+        res.end('false');
     }
-    res.end();
 });
 
 app.get('/api/reservation', function(req, res) {
@@ -26,7 +28,7 @@ app.get('/api/reservation', function(req, res) {
 
 app.get('/api/waitList', function(req, res) {
     res.json(waitList);
-})
+});
 
 app.get('/api/reservation/clear', function (req, res) {
     reservations = [];
