@@ -11,6 +11,7 @@ let waitList = [];
 app.use(bodyParser.json());
 
 app.post('/api/reservation', function (req, res) {
+    console.log(req.body);
     if (reservations.length <= 5) {
         reservations.push(req.body);
     } else {
@@ -51,3 +52,4 @@ app.get("/reserve", (req, res) => {
 app.get("/tables", (req, res) => {
     res.sendFile(path.join(__dirname, "../HTML/tables.html"))
 });
+
