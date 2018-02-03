@@ -11,7 +11,7 @@ let waitList = [];
 app.use(bodyParser.json());
 
 app.post('/api/reservation', function (req, res) {
-    if (reservations.length <= 5) {
+    if (reservations.length < 5) {
         reservations.push(req.body);
         res.end('true');
     } else {
