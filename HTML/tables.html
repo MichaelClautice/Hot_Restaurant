@@ -40,7 +40,7 @@
                             <strong>Reservations</strong>
                         </h3>
                     </div>
-                    <div class="panel-body"></div>
+                    <div class="panel-body" id="rezzes"></div>
 
                 </div>
 
@@ -50,7 +50,7 @@
                             <strong>Waitlist</strong>
                         </h3>
                     </div>
-                    <div class="panel-body"></div>
+                    <div class="panel-body" id="waitList"></div>
                 </div>
             </div>
         </div>
@@ -58,6 +58,38 @@
         <a>|</a>
         <a href="https://www.w3schools.com">API Wait List</a>
     </div>
+    
+    <script type="text/javascript">
+        $(document).ready(function () { 
+            console.log("ready")
+            $.get("/api/reservation", function (data) {
+                for (let i = 0; i < data.length; i++) {
+                    if (data) {
+                        $("#rezzes").prepend(
+                            "<div class='well' id='tableWell-01'><h2><span class='label label-primary'>1</span> | " + data[i].name + "</h2></div>");
+                        
+                    }
+                    else {
+                        $("#rezzes").text("There are currently no Reservations");
+                        $("#waitList").hide();
+                    }
+                }
+            });
+            $.get("/api/waitlist", function (data) {
+                for (let i = 0; i < data.length; i++) {
+                    if (data) {
+                        $("#waitList").prepend(
+                            "<div class='well' id='tableWell-01'><h2><span class='label label-primary'>1</span> | " + data[i].name + "</h2></div>");
+
+                    }
+                    else {
+                        $("#waitList").text("Currently No Wait list");
+                        
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
 

@@ -43,7 +43,7 @@ app.listen(port, () => {
 // Routes to pages
 
 app.get("/", (req, res)=> {
-    console.log("hello");
+    
     res.sendFile(path.join(__dirname, "../HTML/home.html"))
 });
 
@@ -54,4 +54,3 @@ app.get("/reserve", (req, res) => {
 app.get("/tables", (req, res) => {
     res.sendFile(path.join(__dirname, "../HTML/tables.html"))
 });
-
