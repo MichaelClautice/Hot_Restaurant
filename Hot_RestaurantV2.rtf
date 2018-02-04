@@ -1,0 +1,378 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww8040\viewh16160\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf0 \
+
+\b \'95 HotRestaurant Reservation App
+\b0 \
+\
+\'95 (Phase I?)\
+\
+\'95 Description:\
+\
+\'95 App demonstrating Node & Express w/ jQuery \
+\
+\'95 Purpose:\
+\
+\'95 Schedule reservation requests\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\'95 5 tables available\
+\
+\'95 First 5 requests get a reservation \
+\
+\'95 Reservation requests after first 5 requests are added to waiting list\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\'95 Live Demo: <https://hot-restaurant-fsf.herokuapp.com/>\
+\
+\'95 ![Hot Restaurant Image](Images/HotRestaurant.png)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+
+\b \'95 Notes
+\b0 \
+\
+\'95 Current app doesn't have admin handling \
+\
+\'95 Admin handling will be dealt w/ @ a later time\
+\
+\'95 Don't separate the JavaScript from the HTML in the client-side code \
+\
+\'95 i.e. Don't use external JavaScript \
+\
+\'95 External JavaScript needs an additional line of code to config the express server to know location of JavaScript\
+\
+\'95 
+\i Good luck! Don't stress out
+\i0 \
+\
+
+\i \'95 Spend some time trying to build exposure. (?)
+\i0 \
+\
+\'95 
+\i Don't get overwhelmed. We'll have plenty of time to come back to this.
+\i0 \
+\
+___________________________\
+\
+\
+Thomas Eaves [10:21 AM]\
+\
+Suggestion: use that as the README associated with your GitHub repo. You'll get the styling benefits, immediately\
+\
+___________________________\
+\
+\'95 Phase II\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\'95 \ul Backend Team\ulnone :\
+\
+\'95 Create a basic Express server\
+\
+\'95 Server at this point should do the BARE MINIMUM: \
+\
+\'95 When the cmnd node server.js is run, screen should read: "Listening at PORT 3000" \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\'95 \ul Frontend Team\ulnone :\
+\
+\'95 Create 3 HTML files: \
+\
+\'95 1 - home.html \
+\
+\'95 2 - tables.html \
+\
+\'95 3 - reserve.html \
+\
+\'95 Use dummy data to create pgs similar to the sample Hot Reservation webpage\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\'95 \ul Frontend & Backend Teams\ulnone : \
+\
+\'95 Think about how these should look: \
+\
+\'95 Data\
+\
+\'95 API\
+\
+\'95 Routes \
+\
+___________________________\
+\
+\'95 Phase III\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\'95 \ul Backend Team\ulnone :\
+\
+\'95 Create an array var of objects to hold reservations\
+\
+\'95 Create an array var of objects to hold waitlist\
+\
+\'95 Create a set of routes that display those 2 arrays as JSONs\
+\
+\'95 Users should be able to view these JSONs in a table @ tables.html (localhost:3000/api/tables)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\'95 \ul Frontend Team\ulnone :\
+\
+\'95 Temporarily join the backend team\
+\
+\'95 Frontend Team will create Express routes that display the HTML pgs when user visits pg via URL\
+\
+\'95 i.e.: localhost:3000/tables should display the table.html page\
+\
+\'95 If you finish early create code to convert your form data into JSON objects\
+\
+___________________________\
+\
+\'95 (Phase IV?)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\'95 \ul Backend Team\ulnone :\
+\
+\'95 Create code-logic to handle reservation requests\
+\
+\'95 Code for reservation POST requests should:\
+\
+\'95 take in JSON objects\
+\
+\'95 checks if there are available tables\
+\
+\'95 adds the JSON object to:\
+\
+\'95 reservation array - or \
+\
+\'95 waitlist array \
+\
+\'95 POST route should also \
+\
+\'95 respond to requests w/ a true or false confirmation of whether the requestor-user has:\
+\
+\'95 table reservation \
+\
+\'95 or is on waiting list\
+\
+\'95 Use Postman to test GET & POST requests\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\'95 \ul Frontend Team\ulnone :\
+\
+\'95 Research on using AJAX for both GET & POST requests\
+\
+\'95 Create code on tables.html pg so it can retrieve data from the Backend Team's API via an AJAX GET request\
+\
+\'95 Create code on reserve.html pg so it can send data to the Backend Team's API via an AJAX POST request\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ___________________________\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\'95 \ul Frontend & Backend Teams\ulnone : \
+\
+\'95 This is the most challenging part of today's activity. Be persistent! You can do this!\
+\
+___________________________\
+\
+Steve Zinski [Yesterday at 1:05 PM]\
+\
+in #saturday-discussion\
+\
+`app.use(express.static('public'))` is your friend.\
+\
+___________________________\
+\
+2 replies\
+\
+Thomas Eaves [24 hours ago]\
+\
+https://stackoverflow.com/questions/10434001/static-files-with-express-js\
+\
+stackoverflow.com\
+\
+static files with express.js\
+\
+I want to serve index.html and /media subdirectory as static files. \
+\
+The index file should be served both at /index.html and / URLs. \
+\
+I have web_server.use("/media", express.static(__dirname + '/me...\
+\
+___________________________\
+\
+ \
+Thomas Eaves [24 hours ago]\
+\
+The second (unaccepted) answer is pretty solid\
+\
+___________________________\
+\
+\
+Rob McCracken [1:06 PM]\
+\
+http://expressjs.com/en/4x/api.html#app.use\
+\
+___________________________\
+\
+\
+Nikki Aaron [1:08 PM]\
+\
+When each of the contributors pushed to Heroku, it pushes to different places ( to each of our individual Heroku accounts).\
+\
+Is there a way to have us all push to one Heroku?\
+\
+___________________________\
+\
+\
+Steve Zinski [1:09 PM]\
+\
+You should be pushing to GitHub\
+\
+___________________________\
+\
+\
+Nikki Aaron [1:09 PM]\
+\
+I thought we had to do both.\
+\
+___________________________\
+\
+\
+Steve Zinski [1:10 PM]\
+\
+We\'92re going to push our final working code to Heroku\
+\
+___________________________\
+\
+\
+Nikki Aaron [1:10 PM]\
+\
+well yeah, we finished :stuck_out_tongue:\
+\
+___________________________\
+\
+\
+David Friend [1:10 PM]\
+\
+You can link a Heroku to a github repo\
+\
+So when you push to the github, heroku will pull from github\
+\
+___________________________\
+\
+\
+Nikki Aaron [1:11 PM]\
+\
+If we pushed to Heroku once, we should only have to push to Github after that?\
+\
+___________________________\
+\
+\
+Thomas Eaves [1:12 PM]\
+\
+That sounds right @David Friend @John (Jack) Miller @Steve\
+\
+(cc:ing to verify)\
+\
+___________________________\
+\
+\
+Nikki Aaron [1:13 PM]\
+\
+Tested and confirmed. That is not how mine works after following the class provided instructions.\
+\
+___________________________\
+\
+\
+Thomas Eaves [1:13 PM]\
+\
+Yeah, so let me correct what I said, one repo. should be your Heroku-connected repo. \
+\
+You shouldn't need to push to Heroku, separately (and if you do, one person should do it to avoid the destination issues you were seeing). (edited)\
+\
+___________________________\
+\
+\
+Nikki Aaron [1:14 PM]\
+\
+If I push a GitHub change, it does not show up in Heroku.\
+\
+___________________________\
+\
+\
+Thomas Eaves [1:14 PM]\
+\
+@Nikki Aaron ask Tasha.\
+\
+She's waaaay better at it than I am\
+\
+___________________________\
+\
+\
+Corey Vaughan [1:16 PM]\
+\
+https://stackoverflow.com/questions/15231937/heroku-and-github-at-the-same-time\
+stackoverflow.com\
+\
+heroku and github at the same time\
+\
+So I understand that heroku functions as a git repository, but let's say i want to use github as well as a repository. \
+\
+How do I set it up such that I have two repositories and both are in sync?\
+\
+___________________________\
+\
+\
+Nikki Aaron [1:27 PM]\
+\
+There is also a menu option at https://dashboard.heroku.com/apps/APPNAME/deploy/github to Connect GitHub and auto-deploy on GitHub push\
+\
+Message #saturday-discussion\
+\
+___________________________\
+\
+END SAT FEB 04, 2018\
+\
+\
+\
+\
+\
+\
+}
